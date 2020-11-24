@@ -5,12 +5,12 @@ import plotly.io as pio
 
 newfile = open('cleaned.csv', 'w')
 writer = csv.writer(newfile)
-writer.writerow(['LEAID','STATE','ZIP','OP'])
+writer.writerow(['LEA_NAME','STATE','ZIP','OP'])
 
 df = pd.read_csv('data.csv')
 
 for index, row in df.iterrows():
-    writer.writerow([row['LEAID'],row['STATENAME'],row['MZIP'],row['OPERATIONAL_SCHOOLS']])
+    writer.writerow([row['LEA_NAME'],row['STATENAME'],row['MZIP'],row['OPERATIONAL_SCHOOLS']])
 newfile.close()
 
 # df = pd.read_csv('cleaned.csv')
